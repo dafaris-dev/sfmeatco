@@ -243,19 +243,7 @@ SERVICES_BODY = '''<section class="page-hero">
 ''' + next_page("Menu", "menu.html", 4, "Our<br/><em>Menu.</em>")
 
 
-MENU_BODY = '''<section class="page-hero">
-  <div class="wrap">
-    <p class="page-crumb">Page 04 of 05 · Menu</p>
-    <h1>Our<br/><em>Menu.</em></h1>
-    <p class="page-lead">
-      A tight, considered counter — not an inventory. We stock what we can stand
-      behind: hand-selected whole animals broken down in-house, aged to spec, and
-      finished to order. Here's what you'll usually find in the case.
-    </p>
-  </div>
-</section>
-
-<section class="sec sec-dark products" id="products">
+MENU_BODY = '''<section class="sec sec-dark products" id="products" style="padding-top:clamp(140px, 15vw, 200px)">
   <div class="wrap">
     <!-- Row 1 -->
     <article class="product-row reveal">
