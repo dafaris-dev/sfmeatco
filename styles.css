@@ -1468,3 +1468,40 @@ body{padding-top:0}
   .sw-img{grid-column: 1 / -1; aspect-ratio: 16/9; margin-top:14px}
   .sw-num{grid-row:1}
 }
+
+/* ============ MERCATO DELIVERY BUTTON ============ */
+.mercato-wrap{
+  display:flex; justify-content:center;
+  margin-top:40px;
+}
+.mercato-btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 28px;
+  background:#199173;
+  color:#ffffff;
+  border-radius:999px;
+  font-family:var(--sans);
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.01em;
+  text-decoration:none;
+  box-shadow:0 6px 24px rgba(25,145,115,.25);
+  transition:background .3s var(--t), transform .3s var(--t), box-shadow .3s var(--t);
+}
+.mercato-btn:hover{
+  background:#15806a;
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(25,145,115,.4);
+}
+.mercato-btn strong{
+  font-family:var(--serif);
+  font-weight:700;
+  font-style:italic;
+  font-size:17px;
+  letter-spacing:-.01em;
+  display:inline-flex; align-items:baseline;
+}
+.mercato-btn strong .dot{
+  font-style:normal;
+  margin-left:1px;
+}
