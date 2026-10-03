@@ -487,16 +487,6 @@ MENU_BODY = '''<section class="page-hero">
   </div>
 </section>
 
-<section class="strip" aria-hidden="true">
-  <div class="strip-grid">
-    <div class="strip-cell wide"><div class="photo photo--strip1" style="position:absolute;inset:0"></div><span class="label">The Block</span></div>
-    <div class="strip-cell"><div class="photo photo--strip2" style="position:absolute;inset:0"></div><span class="label">Dry-Age</span></div>
-    <div class="strip-cell"><div class="photo photo--strip3" style="position:absolute;inset:0"></div><span class="label">On The Pan</span></div>
-    <div class="strip-cell"><div class="photo photo--strip4" style="position:absolute;inset:0"></div><span class="label">The Case</span></div>
-    <div class="strip-cell"><div class="photo photo--strip5" style="position:absolute;inset:0"></div><span class="label">To-Go</span></div>
-  </div>
-</section>
-
 ''' + next_page("Visit", "visit.html", 5, "Come<br/><em>Visit.</em>")
 
 
