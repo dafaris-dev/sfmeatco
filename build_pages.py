@@ -91,12 +91,6 @@ ABOUT_BODY = '''<section class="page-hero page-hero--about">
     </div>
     <p class="page-crumb">Page 01 of 05 · About</p>
     <h1>We're the <em>new guys</em><br/>on the block.</h1>
-    <p class="page-lead">
-      A family-run Hayes Valley butcher shop opened in 2023 by Justin Seabridge and
-      Kevin Nishikawa on the former Fatted Calf corner — dry-aged beef, Japanese
-      and domestic Wagyu, pasture-raised chicken, pork and lamb, plus sandwiches
-      and bottles to take home.
-    </p>
     <div class="page-meta">
       <div><small>Established</small><strong>2023</strong></div>
       <div><small>Neighborhood</small><strong>Hayes Valley</strong></div>
@@ -161,12 +155,6 @@ MISSION_BODY = '''<section class="page-hero">
   <div class="wrap">
     <p class="page-crumb">Page 02 of 05 · Mission</p>
     <h1>The community's<br/><em>go-to butcher.</em></h1>
-    <p class="page-lead">
-      Our vision is to become the community's go-to destination for high-quality
-      meats and exceptional service — the premier butcher shop in our area, known
-      for sourcing the finest cuts, personalized customer experiences, and
-      supporting local farmers and ranchers.
-    </p>
   </div>
 </section>
 
@@ -195,12 +183,6 @@ SERVICES_BODY = '''<section class="page-hero">
   <div class="wrap">
     <p class="page-crumb">Page 03 of 05 · Services</p>
     <h1>What <em>we do</em><br/>on the block.</h1>
-    <p class="page-lead">
-      We take pride in a wide range of services built around the diverse needs of
-      our customers. Our experienced team of butchers and staff is committed to
-      service that goes beyond selling meat — making sure every visit to the shop
-      is the best possible one.
-    </p>
   </div>
 </section>
 
