@@ -439,14 +439,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">05</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 150 Q200 85 360 150 L360 170 L40 170 Z" fill="#d8a860" fill-opacity=".9"/>
-              <rect x="40" y="170" width="320" height="36" fill="#f5c860" fill-opacity=".85"/>
-              <rect x="40" y="206" width="320" height="12" fill="#2a5a1a" fill-opacity=".7"/>
-              <path d="M40 218 L360 218 Q260 290 40 240 Z" fill="#d8a860" fill-opacity=".9"/>
-            </svg>
-          </div>
+          <img src="assets/sw-05-grilled-cheese.webp" alt="Grilled cheese with caramelized onions, spaghetti squash and baby kale" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Grilled Cheese</h3>
@@ -458,17 +451,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">06</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 140 Q200 55 360 140 L360 160 L40 160 Z" fill="#c89060" fill-opacity=".85"/>
-              <rect x="40" y="160" width="320" height="16" fill="#b03a2a" fill-opacity=".85"/>
-              <rect x="40" y="176" width="320" height="12" fill="#eadcb5" fill-opacity=".8"/>
-              <rect x="40" y="188" width="320" height="14" fill="#4a4420" fill-opacity=".85"/>
-              <rect x="40" y="202" width="320" height="14" fill="#2a5a1a" fill-opacity=".7"/>
-              <rect x="40" y="216" width="320" height="12" fill="#c33a1a" fill-opacity=".65"/>
-              <path d="M40 228 L360 228 Q260 290 40 250 Z" fill="#c89060" fill-opacity=".85"/>
-            </svg>
-          </div>
+          <img src="assets/sw-06-muffaletta.webp" alt="Muffaletta with mortadella, provolone, olive spread, tomato and lettuce on a rustic roll" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Muffaletta</h3>
@@ -480,17 +463,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">07</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 140 Q200 60 360 140 L360 160 L40 160 Z" fill="#d8a060" fill-opacity=".9"/>
-              <rect x="40" y="160" width="320" height="60" fill="#722217" fill-opacity=".88"/>
-              <circle cx="110" cy="188" r="22" fill="#8a2a2a" fill-opacity=".9"/>
-              <circle cx="180" cy="188" r="22" fill="#8a2a2a" fill-opacity=".9"/>
-              <circle cx="250" cy="188" r="22" fill="#8a2a2a" fill-opacity=".9"/>
-              <circle cx="320" cy="188" r="22" fill="#8a2a2a" fill-opacity=".9"/>
-              <path d="M40 220 L360 220 Q260 290 40 244 Z" fill="#d8a060" fill-opacity=".9"/>
-            </svg>
-          </div>
+          <img src="assets/sw-07-meatball.webp" alt="Meatball sandwich with house meatballs, tomato sauce, provolone, parmesan and basil on crusty roll" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Meatball Sandwich</h3>
@@ -502,15 +475,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">08</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect x="40" y="150" width="320" height="26" rx="13" fill="#d8a060" fill-opacity=".9"/>
-              <rect x="30" y="168" width="340" height="40" rx="20" fill="#5a1a0f" fill-opacity=".92"/>
-              <rect x="40" y="196" width="320" height="26" rx="13" fill="#d8a060" fill-opacity=".9"/>
-              <path d="M30 180 Q100 170 170 185 Q240 200 310 180 L310 190 L30 190 Z" fill="#e8c050" fill-opacity=".7"/>
-              <path d="M30 198 Q120 190 220 205 Q310 215 370 200 L370 208 L30 208 Z" fill="#2a5a1a" fill-opacity=".65"/>
-            </svg>
-          </div>
+          <img src="assets/sw-08-hot-dog.webp" alt="All-beef hot dog with sauerkraut, relish, jalapeños, pickles, pickled onions, ketchup, mustard and mayo on the side" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>All Beef Hot Dog</h3>
