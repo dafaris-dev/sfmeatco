@@ -563,6 +563,19 @@ section{position:relative}
 .craft .cell .num{font-family:var(--serif); font-size:14px; color:var(--tan); font-feature-settings:"tnum" 1; letter-spacing:.1em}
 .craft .cell h3{font-size:clamp(26px, 2.4vw, 36px); margin-top:48px; letter-spacing:-.02em}
 .craft .cell p{color:var(--bone); font-size:15px; line-height:1.6; margin-top:16px}
+.values-head{
+  margin:clamp(60px, 8vw, 100px) 0 24px;
+  display:flex; align-items:baseline; gap:40px; flex-wrap:wrap;
+  border-top:1px solid var(--line); padding-top:40px;
+}
+.values-title{
+  font-family:var(--serif); font-weight:300;
+  font-size:clamp(28px, 3vw, 44px); letter-spacing:-.015em; line-height:1;
+}
+.values-title em{color:var(--tan); font-style:italic}
+.craft .cell--quote{background:linear-gradient(135deg, rgba(199,70,28,.08), rgba(90,26,26,.14)); border-left:1px solid rgba(199,70,28,.3)}
+.craft .cell--quote .q{font-size:clamp(22px, 2.1vw, 30px); line-height:1.1; color:var(--paper); letter-spacing:-.015em; font-weight:400}
+.craft .cell--quote .q em{color:var(--tan); font-style:italic; font-weight:300}
 
 @media (max-width: 900px){ .craft .grid3{grid-template-columns:1fr} }
 
@@ -669,6 +682,50 @@ section{position:relative}
 
 /* services */
 .services{background:var(--ink); color:var(--paper); overflow:hidden}
+.services .feature{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(32px, 6vw, 90px);
+  align-items:center;
+  margin:clamp(40px, 6vw, 80px) 0 clamp(60px, 8vw, 100px);
+  padding:clamp(32px, 4vw, 56px) 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.services .feature-visual{
+  position:relative;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#1a0d08;
+}
+.services .feature-visual .tag{
+  position:absolute; bottom:22px; left:22px; z-index:2;
+  padding:8px 12px; background:rgba(13,11,9,.75);
+  font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--paper);
+}
+.services .feature-copy h3{
+  font-size:clamp(32px, 3.6vw, 54px); letter-spacing:-.02em; line-height:1.02;
+  margin-bottom:24px;
+}
+.services .feature-copy h3 em{color:var(--tan); font-style:italic; font-weight:300}
+.services .feature-copy > p{color:var(--bone); font-size:clamp(15px, 1.2vw, 17px); line-height:1.65; max-width:560px}
+.services .feature-list{
+  list-style:none; padding:0; margin:28px 0 0;
+  display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; max-width:560px;
+}
+.services .feature-list li{
+  font-size:13px; color:var(--bone); line-height:1.5;
+  display:flex; align-items:flex-start; gap:12px;
+  padding-top:12px; border-top:1px solid var(--line);
+}
+.services .feature-list li::before{
+  content:""; width:5px; height:5px; background:var(--ember); border-radius:50%;
+  margin-top:7px; flex-shrink:0;
+}
+@media (max-width: 900px){
+  .services .feature{grid-template-columns:1fr}
+  .services .feature-list{grid-template-columns:1fr}
+}
+
 .services .list{
   margin-top:40px;
   border-top:1px solid var(--line);
@@ -1156,81 +1213,106 @@ footer{
 <!-- CRAFT -->
 <section class="sec craft" id="craft" aria-labelledby="craft-title">
   <div class="wrap">
+
     <div class="section-head reveal">
       <div>
-        <p class="eyebrow" style="margin-bottom:24px">02 · Mission</p>
+        <p class="eyebrow" style="margin-bottom:24px">02 · Our Mission</p>
         <h2 id="craft-title">
-          Our mission —<br/>
-          <span style="font-style:italic;color:var(--tan);font-weight:300">how we cut, age &amp; cook.</span>
+          The community's<br/>
+          <span style="font-style:italic;color:var(--tan);font-weight:300">go-to butcher.</span>
         </h2>
       </div>
       <p class="lead" style="color:var(--bone)">
-        No warehouse, no middle-mile. Whole animals arrive, get broken down in-house,
-        and move from the dry-ager to the case to the sandwich — on the same block,
-        in the same room, in front of you.
+        At San Francisco Meat Co., our vision is to become the community's go-to
+        destination for high-quality meats and exceptional service. We strive to be
+        recognized as the premier butcher shop in our area — known for sourcing the
+        finest cuts, offering personalized customer experiences, and supporting local
+        farmers and ranchers.
       </p>
     </div>
 
-    <div class="grid3">
+    <div class="values-head reveal">
+      <p class="eyebrow" style="color:var(--tan); margin-bottom:18px">Our Vision</p>
+      <h3 class="values-title">
+        Five principles<br/>
+        <em>we work by.</em>
+      </h3>
+    </div>
+
+    <div class="grid3 values">
       <div class="cell reveal">
         <span class="num">— 01</span>
         <div>
-          <h3>Whole-Animal Butchery</h3>
+          <h3>Quality</h3>
           <p>
-            Primals and whole animals, broken down on the block. You see the cut you
-            buy, and we tell you where it came from and what else is on the carcass.
+            The quality of our meats is the foundation of our business. We're
+            committed to sourcing only the freshest, most flavorful, and ethically
+            raised meats from trusted local suppliers. Every piece is carefully
+            selected and hand-cut to meet our exacting standards for taste,
+            tenderness, and texture.
           </p>
         </div>
       </div>
       <div class="cell reveal d1">
         <span class="num">— 02</span>
         <div>
-          <h3>Custom Dry Agers</h3>
+          <h3>Service</h3>
           <p>
-            Dry-age cabinets kept in plain sight of the counter. Longer hangs rotate
-            through for ribeye, strip and specials — ask what's at week four and what's
-            ready for the pan.
+            We're dedicated to providing exceptional service. Our knowledgeable,
+            friendly staff is always available to offer expert advice, help with
+            special orders, and share cooking tips and recipes — building long
+            relationships, learning your preferences, and going the extra mile to
+            exceed expectations.
           </p>
         </div>
       </div>
       <div class="cell reveal d2">
         <span class="num">— 03</span>
         <div>
-          <h3>Hand Selection</h3>
+          <h3>Community</h3>
           <p>
-            Imported Japanese Wagyu, domestic Wagyu, dry-aged Angus and pasture-raised
-            poultry are hand-chosen — not pulled from a list. If we wouldn't take it home,
-            it doesn't go in the case.
+            We actively collaborate with local farmers and ranchers who share our
+            values of sustainability, animal welfare, and environmentally responsible
+            practices. Promoting local agriculture contributes to the economic
+            vitality and food security of our community — while reducing our
+            carbon footprint.
           </p>
         </div>
       </div>
       <div class="cell reveal">
         <span class="num">— 04</span>
         <div>
-          <h3>In-House Kitchen</h3>
+          <h3>Education</h3>
           <p>
-            Sandwiches built from what's on the block that morning. Trim, bones and
-            offcuts don't go to waste — they become stocks, rubs and the daily special.
+            We're committed to educating our customers about the value of
+            high-quality meats and the importance of knowing where their food comes
+            from. By sharing what we know about meat production and processing, we
+            help our customers make informed choices that align with their values
+            and dietary needs.
           </p>
         </div>
       </div>
       <div class="cell reveal d1">
         <span class="num">— 05</span>
         <div>
-          <h3>Beer &amp; Wine</h3>
+          <h3>Innovation</h3>
           <p>
-            A tight bottle list to pair with what you buy, selected with a certified
-            sommelier on the floor and poured against the cut, not the label.
+            We embrace innovation as a means to continually improve and evolve —
+            always on the lookout for new techniques, technologies, and trends in
+            the meat industry that can enhance the quality, sustainability, and
+            convenience of what we offer, and the service around it.
           </p>
         </div>
       </div>
-      <div class="cell reveal d2">
-        <span class="num">— 06</span>
+      <div class="cell cell--quote reveal d2">
+        <span class="num">— The Shop</span>
         <div>
-          <h3>Classes &amp; Demonstrations</h3>
+          <h3 class="q">A trusted partner,<br/><em>not just a butcher shop.</em></h3>
           <p>
-            Live butchery classes and demonstrations — poultry, lamb, half a hog —
-            run from the shop. Hands-on, small group, with knives on the table.
+            With our commitment to quality, service, community, education and
+            innovation, we strive to make a lasting impact on the lives of our
+            customers and our local community — helping families make delicious,
+            wholesome, and sustainable choices every day.
           </p>
         </div>
       </div>
@@ -1245,54 +1327,140 @@ footer{
       <div>
         <p class="eyebrow" style="margin-bottom:24px">03 · Services</p>
         <h2 id="services-title">
-          What<br/>
-          <span style="font-style:italic;color:var(--tan);font-weight:300">we do.</span>
+          San Francisco<br/>
+          <span style="font-style:italic;color:var(--tan);font-weight:300">Meat Co.</span>
         </h2>
       </div>
       <p class="lead" style="color:var(--bone)">
-        A butcher counter, a kitchen, a bottle shop, and a classroom — all on the same
-        corner. If it's not listed, ask: a lot of what we do starts with a phone call.
+        We take pride in a wide range of services built around the diverse needs of
+        our customers. Our experienced team of butchers and staff is committed to
+        service that goes beyond selling meat — making sure every visit to the shop
+        is the best possible one.
       </p>
     </div>
+
+    <!-- FEATURED: Specialty Dry Aging -->
+    <article class="feature reveal">
+      <div class="feature-visual">
+        <div class="photo photo--wagyu" style="position:absolute;inset:0" role="img" aria-label="Dry-aged beef resting in a controlled aging chamber">
+          <svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <radialGradient id="da1" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" stop-color="#9c3b1e" stop-opacity=".55"/>
+                <stop offset="100%" stop-color="#0a0504" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="400" cy="520" rx="300" ry="340" fill="url(#da1)"/>
+            <!-- aging cabinet grid -->
+            <g stroke="#f4ece0" stroke-opacity=".18" fill="none" stroke-width="1">
+              <rect x="60" y="60" width="680" height="880"/>
+              <line x1="60" y1="260" x2="740" y2="260"/>
+              <line x1="60" y1="500" x2="740" y2="500"/>
+              <line x1="60" y1="740" x2="740" y2="740"/>
+              <line x1="400" y1="60" x2="400" y2="940"/>
+            </g>
+            <!-- aging primals -->
+            <g fill="#5a1a14" fill-opacity=".65">
+              <path d="M160 140 q 40 -40 80 0 q 20 60 -10 90 q -40 20 -70 -10 q -20 -40 0 -80 Z"/>
+              <path d="M500 180 q 40 -30 70 0 q 20 50 -10 80 q -40 20 -70 -10 q -15 -30 10 -70 Z"/>
+              <path d="M180 380 q 40 -40 80 0 q 20 60 -10 90 q -40 20 -70 -10 q -20 -40 0 -80 Z"/>
+              <path d="M520 420 q 40 -30 70 0 q 20 50 -10 80 q -40 20 -70 -10 q -15 -30 10 -70 Z"/>
+              <path d="M160 620 q 40 -40 80 0 q 20 60 -10 90 q -40 20 -70 -10 q -20 -40 0 -80 Z"/>
+              <path d="M500 660 q 40 -30 70 0 q 20 50 -10 80 q -40 20 -70 -10 q -15 -30 10 -70 Z"/>
+            </g>
+            <g fill="#f3e2bf" fill-opacity=".2">
+              <ellipse cx="200" cy="170" rx="16" ry="5"/>
+              <ellipse cx="540" cy="210" rx="14" ry="4"/>
+              <ellipse cx="220" cy="410" rx="16" ry="5"/>
+              <ellipse cx="560" cy="450" rx="14" ry="4"/>
+            </g>
+          </svg>
+        </div>
+        <span class="tag">In-House · Fell Street</span>
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow" style="color:var(--tan); margin-bottom:22px">Specialty Dry Aging</p>
+        <h3>What makes <em>our dry aging</em> different.</h3>
+        <p>
+          At San Francisco Meat Co., our dry aging process is a blend of time,
+          science, and craftsmanship. In our temperature- and humidity-controlled
+          aging room, premium beef cuts rest and develop unparalleled depth of
+          flavor, tenderness, and aroma. Over several weeks, natural enzymes break
+          down muscle fibers while the outer layer forms a protective crust,
+          concentrating the meat's rich, buttery essence. The result is an
+          exceptional steak experience — bold, complex, and unmistakably San
+          Francisco Meat Co. quality.
+        </p>
+        <ul class="feature-list">
+          <li>Custom dry age programs (21 to 90+ days)</li>
+          <li>Premium cut selection</li>
+          <li>Private label aging for your restaurant</li>
+          <li>Controlled aging environment</li>
+          <li>Dry age retail &amp; wholesale supply</li>
+          <li>Custom portioning &amp; packaging</li>
+          <li>Specialty dry age pork &amp; poultry programs</li>
+        </ul>
+        <a class="btn ember" href="#contact" style="margin-top:28px">
+          Enquire About Dry Aging
+          <svg class="arrow" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg>
+        </a>
+      </div>
+    </article>
 
     <div class="list">
       <article class="svc reveal">
         <span class="idx">— 01</span>
-        <h3>Retail <em>Butcher</em> Counter</h3>
-        <p>Daily cuts of dry-aged Angus, Wagyu, pork, lamb and poultry — pulled, trimmed and portioned to order.</p>
-        <a class="cta" href="#products">Explore
+        <h3>Fresh <em>Meat</em> Daily</h3>
+        <p>A hand-cut counter stocked and rotated every day — dry-aged Angus, Wagyu, pork, lamb and poultry pulled, trimmed and portioned to order.</p>
+        <a class="cta" href="#products">Today's Case
           <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
         </a>
       </article>
       <article class="svc reveal d1">
         <span class="idx">— 02</span>
-        <h3>Custom <em>Cutting</em> &amp; Special Orders</h3>
-        <p>Hard-to-find cuts, dinner-party portions, large roasts and whole-animal arrangements by request.</p>
-        <a class="cta" href="#contact">Request
+        <h3>Dry <em>Aging</em></h3>
+        <p>Our dry aging program brings out the very best in premium beef. Using carefully controlled temperature, humidity and airflow, select cuts develop unmatched tenderness and rich, concentrated flavor — monitored throughout for consistency and excellence.</p>
+        <a class="cta" href="#contact">Programs
           <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
         </a>
       </article>
       <article class="svc reveal d2">
         <span class="idx">— 03</span>
-        <h3>Sandwiches <em>&amp;</em> Kitchen</h3>
-        <p>Lunch-counter sandwiches built from what's on the block — Wagyu, roast beef and daily specials.</p>
-        <a class="cta" href="#visit">Visit
+        <h3>Custom <em>Orders</em></h3>
+        <p>Every customer has unique preferences when it comes to cuts. Our skilled butchers are trained in the art of custom butchering and can prepare meat to your exact specifications — special cuts, portioning or trimming, done to order.</p>
+        <a class="cta" href="#contact">Request
           <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
         </a>
       </article>
       <article class="svc reveal">
         <span class="idx">— 04</span>
-        <h3>Beer &amp; <em>Wine</em> To-Go</h3>
-        <p>A curated bottle list to pair with your cut, selected with a certified sommelier on the floor.</p>
-        <a class="cta" href="#visit">In Store
+        <h3>Wholesale <em>&amp;</em> Bulk Orders</h3>
+        <p>We cater to the needs of restaurants, caterers and other businesses that require meat in larger quantities. Wholesale and bulk ordering options at competitive prices — contact us to discuss your needs and we'll work with you to fulfill them.</p>
+        <a class="cta" href="#contact">Talk To Us
           <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
         </a>
       </article>
       <article class="svc reveal d1">
         <span class="idx">— 05</span>
-        <h3>Butchery <em>Classes</em></h3>
-        <p>Live demonstrations and small-group classes — poultry, lamb and half-a-hog breakdowns at the shop.</p>
-        <a class="cta" href="#contact">Enroll
+        <h3>Catering <em>&amp;</em> Events</h3>
+        <p>Hosting a special event? Let us take care of the meat. Catering for weddings, parties and other occasions — contact us for more details.</p>
+        <a class="cta" href="#contact">Enquire
+          <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </article>
+      <article class="svc reveal d2">
+        <span class="idx">— 06</span>
+        <h3>Expert <em>Advice</em></h3>
+        <p>Our knowledgeable staff is always available for expert advice on meat selection, preparation and cooking — the perfect cut for your recipe, cooking tips, and answers to anything you want to know about our products.</p>
+        <a class="cta" href="#visit">Come In
+          <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </article>
+      <article class="svc reveal">
+        <span class="idx">— 07</span>
+        <h3>Events <em>&amp;</em> Workshops</h3>
+        <p>We foster community and share our love for meat through events and workshops — tastings, cooking demonstrations and butchery classes (poultry, lamb and half-a-hog breakdowns) that bring customers and meat enthusiasts together.</p>
+        <a class="cta" href="#contact">Schedule
           <svg class="arrow" viewBox="0 0 28 8" fill="none" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3" stroke="currentColor" stroke-width="1.2"/></svg>
         </a>
       </article>
