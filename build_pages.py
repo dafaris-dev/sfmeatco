@@ -249,27 +249,7 @@ SERVICES_BODY = '''<section class="page-hero">
   <div class="wrap">
     <article class="feature reveal">
       <div class="feature-visual">
-        <div class="photo photo--wagyu" style="position:absolute;inset:0" role="img" aria-label="Dry-aged beef resting in a controlled aging chamber">
-          <svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs><radialGradient id="dax" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#9c3b1e" stop-opacity=".55"/><stop offset="100%" stop-color="#0a0504" stop-opacity="0"/></radialGradient></defs>
-            <ellipse cx="400" cy="520" rx="300" ry="340" fill="url(#dax)"/>
-            <g stroke="#f4ece0" stroke-opacity=".18" fill="none" stroke-width="1">
-              <rect x="60" y="60" width="680" height="880"/>
-              <line x1="60" y1="260" x2="740" y2="260"/>
-              <line x1="60" y1="500" x2="740" y2="500"/>
-              <line x1="60" y1="740" x2="740" y2="740"/>
-              <line x1="400" y1="60" x2="400" y2="940"/>
-            </g>
-            <g fill="#5a1a14" fill-opacity=".65">
-              <path d="M160 140 q 40 -40 80 0 q 20 60 -10 90 q -40 20 -70 -10 q -20 -40 0 -80 Z"/>
-              <path d="M500 180 q 40 -30 70 0 q 20 50 -10 80 q -40 20 -70 -10 q -15 -30 10 -70 Z"/>
-              <path d="M180 380 q 40 -40 80 0 q 20 60 -10 90 q -40 20 -70 -10 q -20 -40 0 -80 Z"/>
-              <path d="M520 420 q 40 -30 70 0 q 20 50 -10 80 q -40 20 -70 -10 q -15 -30 10 -70 Z"/>
-              <path d="M160 620 q 40 -40 80 0 q 20 60 -10 90 q -40 20 -70 -10 q -20 -40 0 -80 Z"/>
-              <path d="M500 660 q 40 -30 70 0 q 20 50 -10 80 q -40 20 -70 -10 q -15 -30 10 -70 Z"/>
-            </g>
-          </svg>
-        </div>
+        <img src="assets/dry-age.webp" alt="Three shelves of dry-aged beef primals in the shop's aging cabinet, each tagged with the San Francisco Meat Co. butcher card" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center"/>
         <span class="tag">In-House · Fell Street</span>
       </div>
       <div class="feature-copy">
