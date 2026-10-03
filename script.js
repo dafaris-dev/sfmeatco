@@ -45,13 +45,13 @@
   var todayEl = document.getElementById('todayHours');
   if(todayEl){
     var hoursByDay = {
-      0: '11:00 am — 06:00 pm',
+      0: '11:00 am to 06:00 pm',
       1: null,
-      2: '10:00 am — 07:00 pm',
-      3: '10:00 am — 07:00 pm',
-      4: '10:00 am — 07:00 pm',
-      5: '10:00 am — 07:00 pm',
-      6: '10:00 am — 07:00 pm'
+      2: '10:00 am to 07:00 pm',
+      3: '10:00 am to 07:00 pm',
+      4: '10:00 am to 07:00 pm',
+      5: '10:00 am to 07:00 pm',
+      6: '10:00 am to 07:00 pm'
     };
     var d = new Date();
     var h = hoursByDay[d.getDay()];
