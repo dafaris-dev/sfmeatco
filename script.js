@@ -45,22 +45,22 @@
   var todayEl = document.getElementById('todayHours');
   if(todayEl){
     var hoursByDay = {
-      0: '11:00 am – 06:00 pm',       // Sun
-      1: null,                         // Mon closed
-      2: '10:00 am – 07:00 pm',
-      3: '10:00 am – 07:00 pm',
-      4: '10:00 am – 07:00 pm',
-      5: '10:00 am – 07:00 pm',
-      6: '10:00 am – 07:00 pm'
+      0: '11:00 am — 06:00 pm',
+      1: null,
+      2: '10:00 am — 07:00 pm',
+      3: '10:00 am — 07:00 pm',
+      4: '10:00 am — 07:00 pm',
+      5: '10:00 am — 07:00 pm',
+      6: '10:00 am — 07:00 pm'
     };
     var d = new Date();
     var h = hoursByDay[d.getDay()];
-    var container = todayEl.closest('.hours-today');
+    var container = todayEl.closest('.vp-hours') || todayEl.closest('.hours-today');
     if(h){
       todayEl.textContent = h;
     } else {
       todayEl.textContent = 'Closed today';
-      if(container){ container.classList.add('closed'); }
+      if(container){ container.classList.add('closed-today', 'closed'); }
       var strong = container && container.querySelector('strong');
       if(strong){ strong.textContent = 'Closed'; }
     }
