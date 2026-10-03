@@ -112,8 +112,8 @@ ABOUT_BODY = '''<section class="page-hero page-hero--about">
         </div>
       </div>
       <div class="reveal d1">
-        <p>At San Francisco Meat Co., we believe great meals start with great ingredients. That's why we source only the finest meats — from imported Japanese Wagyu to premium, hand-selected cuts — and bring them straight to your kitchen with care and consistency.</p>
-        <p>Whether you're preparing a weeknight dinner or celebrating life's special moments, our meats are chosen for their flavor, quality, and reliability. With San Francisco Meat Co., you're not just buying meat — you're bringing home a culinary experience built on craftsmanship, trust, and tradition.</p>
+        <p>At San Francisco Meat Co., we believe great meals start with great ingredients. That's why we source only the finest meats, from imported Japanese Wagyu to premium, hand-selected cuts, and bring them straight to your kitchen with care and consistency.</p>
+        <p>Whether you're preparing a weeknight dinner or celebrating life's special moments, our meats are chosen for their flavor, quality, and reliability. With San Francisco Meat Co., you're not just buying meat. You're bringing home a culinary experience built on craftsmanship, trust, and tradition.</p>
       </div>
     </div>
 
@@ -129,9 +129,9 @@ ABOUT_BODY = '''<section class="page-hero page-hero--about">
       <div class="copy reveal">
         <p class="about-eyebrow">About Us</p>
         <h2>Our <em>History.</em></h2>
-        <p>At San Francisco Meat Co., we're a family-owned butchery proudly serving our community with premium meats and personalized service. Our roots run three generations deep — through Justin Seabridge's father, who built a farm-to-market wholesale business supplying Bay Area restaurants and grocers for decades, and the hunting trips through Wyoming and Colorado where Justin first learned to work a whole animal.</p>
+        <p>At San Francisco Meat Co., we're a family-owned butchery proudly serving our community with premium meats and personalized service. Our roots run three generations deep, through Justin Seabridge's father, who built a farm-to-market wholesale business supplying Bay Area restaurants and grocers for decades, and the hunting trips through Wyoming and Colorado where Justin first learned to work a whole animal.</p>
         <p>Whether you're a professional chef or a home cook, we offer the same exceptional care and attention to detail in every cut. From classic favorites to specialty selections, our meats are chosen for superior flavor, tenderness, and quality.</p>
-        <p>We believe great meals start with great ingredients — and we're here to make sure every meal you prepare is nothing short of delicious.</p>
+        <p>We believe great meals start with great ingredients, and we're here to make sure every meal you prepare is nothing short of delicious.</p>
       </div>
       <figure class="pic reveal d1">
         <img src="assets/5.webp" alt="Hand-selected raw ribeye with vintage carving fork" loading="lazy"/>
@@ -142,8 +142,8 @@ ABOUT_BODY = '''<section class="page-hero page-hero--about">
     <div class="timeline reveal" aria-label="Company timeline">
       <div class="tr"><div class="yr">Earlier</div><div class="tx"><strong>Family wholesale.</strong> Justin's father builds a farm-to-market wholesale business supplying Bay Area restaurants and grocers for decades.</div></div>
       <div class="tr"><div class="yr">Young</div><div class="tx"><strong>Hunting trips west.</strong> Justin learns to break down wild game on family trips through Wyoming and Colorado.</div></div>
-      <div class="tr"><div class="yr">2023</div><div class="tx"><strong>Hayes Valley opens.</strong> San Francisco Meat Co. opens on the former Fatted Calf corner at 320 Fell Street — counter, dry agers, kitchen and wine license intact.</div></div>
-      <div class="tr"><div class="yr">Today</div><div class="tx"><strong>A working butcher shop.</strong> Hand-cut counter, dry-aged beef, Wagyu, sandwiches, bottles — and a classroom running on quieter weeks.</div></div>
+      <div class="tr"><div class="yr">2023</div><div class="tx"><strong>Hayes Valley opens.</strong> San Francisco Meat Co. opens on the former Fatted Calf corner at 320 Fell Street. Counter, dry agers, kitchen and wine license intact.</div></div>
+      <div class="tr"><div class="yr">Today</div><div class="tx"><strong>A working butcher shop.</strong> Hand-cut counter, dry-aged beef, Wagyu, sandwiches, bottles, and a classroom running on quieter weeks.</div></div>
     </div>
   </div>
 </section>
