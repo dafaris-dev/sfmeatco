@@ -566,25 +566,85 @@ section{position:relative}
 
 @media (max-width: 900px){ .craft .grid3{grid-template-columns:1fr} }
 
-/* story */
+/* about */
 .story{background:var(--paper); color:var(--ink-2)}
-.story-inner{display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(32px, 6vw, 100px); align-items:center}
-.story-visual{position:relative; aspect-ratio:4/5; overflow:hidden; background:#2b2017}
-.story-visual img{width:100%; height:100%; object-fit:cover; filter:saturate(.9) contrast(1.06)}
-.story-visual::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(0deg, rgba(13,11,9,.35), transparent 50%);
+.about-eyebrow{
+  font-size:11px; letter-spacing:.32em; text-transform:uppercase;
+  color:var(--rust); font-weight:600;
+  display:inline-flex; align-items:center; gap:14px;
+  margin-bottom:22px;
 }
-.story-visual .caption{
-  position:absolute; left:24px; bottom:24px; z-index:2; color:var(--paper);
-  font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+.about-eyebrow::before{content:""; width:28px; height:1px; background:var(--rust); opacity:.7}
+
+.about-intro{
+  display:grid; grid-template-columns: 1fr 1fr;
+  gap:clamp(32px, 6vw, 96px);
+  align-items:center;
 }
-.story-copy h2{margin-bottom:32px}
-.story-copy .lead{font-size:clamp(17px, 1.4vw, 20px); color:#3b2f22; line-height:1.6; margin-bottom:24px; max-width:560px}
-.story-copy p{color:#44382a; max-width:560px}
-.story-copy p + p{margin-top:18px}
+.about-intro h2{
+  font-size:clamp(38px, 5.4vw, 86px);
+  letter-spacing:-.02em; line-height:.98;
+  color:var(--ink);
+}
+.about-intro h2 em{color:var(--rust); font-style:italic; font-weight:300}
+.about-intro p{color:#44382a; font-size:clamp(15px, 1.2vw, 17px); line-height:1.65; max-width:540px}
+.about-intro p + p{margin-top:18px}
+.about-intro .signature{
+  margin-top:36px; display:flex; align-items:center; gap:18px;
+  font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#5a4a38;
+}
+.about-intro .signature strong{font-family:var(--serif); text-transform:none; font-weight:500; font-size:22px; letter-spacing:-.01em; color:var(--ink)}
+
+/* 3-image collage */
+.collage{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 150px;
+  gap:14px;
+  margin:clamp(60px, 9vw, 110px) 0;
+}
+.collage figure{
+  position:relative; margin:0;
+  overflow:hidden; background:#2b1a12;
+}
+.collage img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.4s var(--t); filter:saturate(.95) contrast(1.03)}
+.collage figure:hover img{transform:scale(1.05)}
+.collage .c1{grid-column: 1 / span 4; grid-row: span 3}
+.collage .c2{grid-column: 5 / span 2; grid-row: span 2}
+.collage .c3{grid-column: 5 / span 2; grid-row: 3 / span 2}
+.collage .c4{grid-column: 1 / span 3; grid-row: 4 / span 2}
+.collage .c5{grid-column: 4 / span 3; grid-row: 5 / span 2}
+.collage .cap{
+  position:absolute; left:16px; bottom:14px; z-index:2;
+  padding:6px 10px; background:rgba(13,11,9,.65); color:var(--paper);
+  font-size:9.5px; letter-spacing:.26em; text-transform:uppercase;
+  backdrop-filter:blur(4px);
+}
+
+.about-history{
+  display:grid; grid-template-columns: 1.1fr 1fr;
+  gap:clamp(32px, 6vw, 96px);
+  align-items:center;
+  margin-top:40px;
+}
+.about-history .copy h2{
+  font-family:var(--serif); font-weight:300;
+  font-size:clamp(40px, 5.6vw, 88px);
+  letter-spacing:-.02em; line-height:1;
+  color:var(--ink);
+  margin-bottom:28px;
+}
+.about-history .copy h2 em{color:var(--rust); font-style:italic}
+.about-history .copy p{color:#44382a; font-size:clamp(15px, 1.2vw, 17px); line-height:1.65; max-width:540px}
+.about-history .copy p + p{margin-top:18px}
+.about-history .pic{position:relative; aspect-ratio:4/5; overflow:hidden; background:#1a0d08; order:2}
+.about-history .pic img{width:100%; height:100%; object-fit:cover; filter:saturate(.9) contrast(1.1); transition:transform 1.6s var(--t)}
+.about-history .pic:hover img{transform:scale(1.04)}
+.about-history .pic::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(13,11,9,.35), transparent 55%)}
+.about-history .pic .cap{position:absolute; left:20px; bottom:18px; z-index:2; color:var(--paper); font-size:10px; letter-spacing:.26em; text-transform:uppercase; padding:6px 10px; background:rgba(13,11,9,.6); backdrop-filter:blur(4px)}
+
 .timeline{
-  margin-top:48px;
+  margin-top:72px;
   border-top:1px solid var(--line-ink);
 }
 .timeline .tr{
@@ -596,7 +656,16 @@ section{position:relative}
 .timeline .yr{font-family:var(--serif); font-size:22px; color:var(--ink); letter-spacing:-.01em; font-feature-settings:"tnum" 1}
 .timeline .tx{color:#44382a; font-size:15px; line-height:1.55}
 .timeline .tx strong{color:var(--ink); font-weight:600}
-@media (max-width: 900px){ .story-inner{grid-template-columns:1fr} .timeline .tr{grid-template-columns:1fr} }
+@media (max-width: 900px){
+  .about-intro, .about-history{grid-template-columns:1fr}
+  .collage{grid-template-columns: repeat(2, 1fr); grid-auto-rows:160px}
+  .collage .c1{grid-column: 1 / -1; grid-row: span 2}
+  .collage .c2{grid-column: 1 / span 1; grid-row: span 1}
+  .collage .c3{grid-column: 2 / span 1; grid-row: span 1}
+  .collage .c4{grid-column: 1 / span 1; grid-row: span 1}
+  .collage .c5{grid-column: 2 / span 1; grid-row: span 1}
+  .timeline .tr{grid-template-columns:1fr}
+}
 
 /* services */
 .services{background:var(--ink); color:var(--paper); overflow:hidden}
@@ -861,11 +930,11 @@ footer{
     </span>
   </a>
   <nav class="nav-links" aria-label="Primary">
-    <a href="#top"      data-section="top">Home</a>
     <a href="#story"    data-section="story">About</a>
     <a href="#craft"    data-section="craft">Mission</a>
     <a href="#services" data-section="services">Services</a>
     <a href="#products" data-section="products">Menu</a>
+    <a href="#visit"    data-section="visit">Visit</a>
     <a href="#contact"  data-section="contact">Contact</a>
   </nav>
   <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" id="menuBtn">
@@ -875,11 +944,11 @@ footer{
 
 <aside class="mobile-sheet" aria-hidden="true">
   <nav aria-label="Mobile">
-    <a href="#top">Home</a>
     <a href="#story">About</a>
     <a href="#craft">Mission</a>
     <a href="#services">Services</a>
     <a href="#products">Menu</a>
+    <a href="#visit">Visit</a>
     <a href="#contact">Contact</a>
   </nav>
   <div class="meta">
@@ -1355,75 +1424,100 @@ footer{
   </div>
 </section>
 
-<!-- STORY -->
-<section class="sec story" id="story" aria-labelledby="story-title">
-  <div class="wrap story-inner">
-    <div class="story-visual reveal" aria-hidden="true">
-      <div class="photo photo--kitchen" style="position:absolute;inset:0">
-        <svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="blk1" cx="50%" cy="40%" r="55%">
-              <stop offset="0%" stop-color="#c0683e" stop-opacity=".35"/>
-              <stop offset="100%" stop-color="#140705" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="blk2" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#4a2a1a" stop-opacity=".6"/>
-              <stop offset="100%" stop-color="#1a0d08" stop-opacity=".8"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="400" cy="400" rx="320" ry="200" fill="url(#blk1)"/>
-          <!-- butcher block -->
-          <rect x="60" y="650" width="680" height="80" fill="url(#blk2)"/>
-          <g stroke="#2a1710" stroke-opacity=".55" stroke-width="1">
-            <line x1="60" y1="665" x2="740" y2="665"/>
-            <line x1="60" y1="685" x2="740" y2="685"/>
-            <line x1="60" y1="705" x2="740" y2="705"/>
-            <line x1="150" y1="650" x2="150" y2="730"/>
-            <line x1="320" y1="650" x2="320" y2="730"/>
-            <line x1="500" y1="650" x2="500" y2="730"/>
-            <line x1="650" y1="650" x2="650" y2="730"/>
-          </g>
-          <!-- knife -->
-          <g transform="translate(260 500) rotate(-18)">
-            <rect x="0" y="0" width="300" height="40" fill="#d9d4c9" fill-opacity=".55"/>
-            <rect x="0" y="40" width="300" height="4" fill="#1a0f08" fill-opacity=".7"/>
-            <rect x="300" y="-6" width="110" height="52" fill="#2a1a12" fill-opacity=".85"/>
-          </g>
-        </svg>
-        <div class="glint"></div>
-      </div>
-      <span class="caption">On The Block · Hayes Valley</span>
-    </div>
-    <div class="story-copy reveal d1">
-      <p class="eyebrow" style="margin-bottom:24px">03 · Our Story</p>
-      <h2 id="story-title">
-        Three generations<br/>
-        <span style="font-style:italic;color:var(--rust);font-weight:300">of knowing the animal.</span>
-      </h2>
-      <p class="lead">
-        San Francisco Meat Co. is a family-run shop opened by Justin Seabridge and
-        Kevin Nishikawa. It took shape across two coasts, three generations, and a
-        corner on Fell Street.
-      </p>
-      <p>
-        Justin learned the craft of processing wild game as a boy, on hunting trips
-        with his family through Wyoming and Colorado. His father ran a farm-to-market
-        wholesale company that supplied restaurants and grocery stores across the
-        Bay Area for decades — meat as a trade, built on long relationships.
-      </p>
-      <p>
-        In 2023 the pair took over the former Fatted Calf Charcuterie space in Hayes
-        Valley, kept the liquor license and sommelier program, and opened the counter
-        the way they'd always wanted to shop one themselves.
-      </p>
+<!-- ABOUT -->
+<section class="sec story" id="story" aria-labelledby="about-title">
+  <div class="wrap">
 
-      <div class="timeline" aria-label="Company timeline">
-        <div class="tr"><div class="yr">Earlier</div><div class="tx"><strong>Family wholesale.</strong> Justin's father builds a farm-to-market wholesale business supplying Bay Area restaurants and grocers for decades.</div></div>
-        <div class="tr"><div class="yr">Young</div><div class="tx"><strong>Hunting trips west.</strong> Justin learns to break down wild game on family trips through Wyoming and Colorado.</div></div>
-        <div class="tr"><div class="yr">2023</div><div class="tx"><strong>Hayes Valley opens.</strong> San Francisco Meat Co. opens on the former Fatted Calf corner at 320 Fell Street — counter, dry agers, kitchen and wine license intact.</div></div>
-        <div class="tr"><div class="yr">Today</div><div class="tx"><strong>A working butcher shop.</strong> Hand-cut counter, dry-aged beef, Wagyu, sandwiches, bottles — and a classroom running on quieter weeks.</div></div>
+    <div class="about-intro">
+      <div class="reveal">
+        <p class="about-eyebrow">About Us</p>
+        <h2 id="about-title">
+          We're the <em>new guys</em><br/>
+          on the block.
+        </h2>
+        <div class="signature">
+          <strong>Est. 2023 · Hayes Valley</strong>
+          <span>Justin Seabridge &amp; Kevin Nishikawa</span>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <p>
+          At San Francisco Meat Co., we believe great meals start with great
+          ingredients. That's why we source only the finest meats — from imported
+          Japanese Wagyu to premium, hand-selected cuts — and bring them straight
+          to your kitchen with care and consistency.
+        </p>
+        <p>
+          Whether you're preparing a weeknight dinner or celebrating life's
+          special moments, our meats are chosen for their flavor, quality, and
+          reliability. With San Francisco Meat Co., you're not just buying meat —
+          you're bringing home a culinary experience built on craftsmanship,
+          trust, and tradition.
+        </p>
       </div>
     </div>
+
+    <div class="collage reveal">
+      <figure class="c1">
+        <img src="assets/4.webp" alt="Two marbled ribeye steaks on a wooden board with rosemary and peppercorns" loading="lazy"/>
+        <span class="cap">Hand-Selected Ribeye</span>
+      </figure>
+      <figure class="c2">
+        <img src="assets/5.webp" alt="Raw ribeye steak with an aged carving fork on a dark surface" loading="lazy"/>
+        <span class="cap">Butcher's Fork</span>
+      </figure>
+      <figure class="c3">
+        <img src="assets/7.webp" alt="Bone-in dry-aged porterhouse steak on a charred block" loading="lazy"/>
+        <span class="cap">Dry-Aged Porterhouse</span>
+      </figure>
+      <figure class="c4">
+        <img src="assets/6.webp" alt="Full butcher case display of pork chops, belly and premium cuts" loading="lazy"/>
+        <span class="cap">The Counter · Fell Street</span>
+      </figure>
+      <figure class="c5">
+        <img src="assets/4.webp" alt="Marbled beef, rosemary and freshly ground pepper on a cutting board" loading="lazy" style="object-position:center 30%"/>
+        <span class="cap">Marbling, Up Close</span>
+      </figure>
+    </div>
+
+    <div class="about-history">
+      <div class="copy reveal">
+        <p class="about-eyebrow">About Us</p>
+        <h2>
+          Our <em>History.</em>
+        </h2>
+        <p>
+          At San Francisco Meat Co., we're a family-owned butchery proudly serving
+          our community with premium meats and personalized service. Our roots run
+          three generations deep — through Justin Seabridge's father, who built a
+          farm-to-market wholesale business supplying Bay Area restaurants and
+          grocers for decades, and the hunting trips through Wyoming and Colorado
+          where Justin first learned to work a whole animal.
+        </p>
+        <p>
+          Whether you're a professional chef or a home cook, we offer the same
+          exceptional care and attention to detail in every cut. From classic
+          favorites to specialty selections, our meats are chosen for superior
+          flavor, tenderness, and quality.
+        </p>
+        <p>
+          We believe great meals start with great ingredients — and we're here to
+          make sure every meal you prepare is nothing short of delicious.
+        </p>
+      </div>
+      <figure class="pic reveal d1">
+        <img src="assets/5.webp" alt="Hand-selected raw ribeye steak with a vintage carving fork" loading="lazy"/>
+        <span class="cap">Hand-Cut · In-House</span>
+      </figure>
+    </div>
+
+    <div class="timeline reveal" aria-label="Company timeline">
+      <div class="tr"><div class="yr">Earlier</div><div class="tx"><strong>Family wholesale.</strong> Justin's father builds a farm-to-market wholesale business supplying Bay Area restaurants and grocers for decades.</div></div>
+      <div class="tr"><div class="yr">Young</div><div class="tx"><strong>Hunting trips west.</strong> Justin learns to break down wild game on family trips through Wyoming and Colorado.</div></div>
+      <div class="tr"><div class="yr">2023</div><div class="tx"><strong>Hayes Valley opens.</strong> San Francisco Meat Co. opens on the former Fatted Calf corner at 320 Fell Street — counter, dry agers, kitchen and wine license intact.</div></div>
+      <div class="tr"><div class="yr">Today</div><div class="tx"><strong>A working butcher shop.</strong> Hand-cut counter, dry-aged beef, Wagyu, sandwiches, bottles — and a classroom running on quieter weeks.</div></div>
+    </div>
+
   </div>
 </section>
 
@@ -1908,7 +2002,7 @@ footer{
 
   // Scroll-spy: underline the active section in the nav
   var navSpyLinks = document.querySelectorAll('.nav-links a[data-section]');
-  var spyIds = ['top','story','craft','services','products','contact'];
+  var spyIds = ['story','craft','services','products','visit','contact'];
   var spyTargets = spyIds.map(function(id){ return document.getElementById(id); }).filter(Boolean);
   function setActive(id){
     navSpyLinks.forEach(function(a){
