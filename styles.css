@@ -1406,3 +1406,14 @@ body{padding-top:0}
 @media (max-width: 900px){
   .visit-page-grid{grid-template-columns:1fr; gap:72px}
 }
+
+/* ============ MINIMAL FOOTER ============ */
+.footer-mini{
+  background:#070605;
+  color:#8a7d68;
+  padding:28px 0;
+  border-top:1px solid var(--line);
+  font-size:12px;
+  letter-spacing:.06em;
+  text-align:center;
+}
