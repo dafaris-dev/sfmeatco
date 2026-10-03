@@ -391,15 +391,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">01</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 150 Q200 70 360 150 L360 170 L40 170 Z" fill="#c08048" fill-opacity=".85"/>
-              <rect x="40" y="170" width="320" height="26" fill="#a63a24" fill-opacity=".85"/>
-              <path d="M30 190 Q120 180 210 195 Q300 210 370 190 L370 215 L30 215 Z" fill="#8a2a2a" fill-opacity=".75"/>
-              <path d="M30 213 Q180 200 370 213 L370 230 L30 230 Z" fill="#efe3bf" fill-opacity=".65"/>
-              <path d="M40 230 L360 230 Q260 290 40 250 Z" fill="#c08048" fill-opacity=".85"/>
-            </svg>
-          </div>
+          <img src="assets/sw-01-rueben.png" alt="Rueben sandwich with pastrami, Swiss, and sauerkraut on sliced rye" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Rueben</h3>
@@ -411,16 +403,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">02</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 140 Q200 60 360 140 L360 160 L40 160 Z" fill="#d6a060" fill-opacity=".85"/>
-              <rect x="40" y="160" width="320" height="18" fill="#4a8a3a" fill-opacity=".7"/>
-              <rect x="40" y="178" width="320" height="20" fill="#eadcb5" fill-opacity=".75"/>
-              <rect x="40" y="198" width="320" height="18" fill="#c33a1a" fill-opacity=".7"/>
-              <rect x="40" y="216" width="320" height="18" fill="#d8b887" fill-opacity=".75"/>
-              <path d="M40 234 L360 234 Q260 290 40 254 Z" fill="#d6a060" fill-opacity=".85"/>
-            </svg>
-          </div>
+          <img src="assets/sw-02-turkey.webp" alt="Turkey sandwich with bacon, cheddar, lettuce and tomato on dutch crunch roll" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Turkey</h3>
@@ -432,15 +415,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">03</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 140 Q200 55 360 140 L360 162 L40 162 Z" fill="#c89060" fill-opacity=".85"/>
-              <rect x="40" y="162" width="320" height="22" fill="#e8a070" fill-opacity=".8"/>
-              <rect x="40" y="184" width="320" height="18" fill="#eadcb5" fill-opacity=".8"/>
-              <rect x="40" y="202" width="320" height="14" fill="#4a8a3a" fill-opacity=".65"/>
-              <path d="M40 216 L360 216 Q260 290 40 240 Z" fill="#c89060" fill-opacity=".85"/>
-            </svg>
-          </div>
+          <img src="assets/sw-03-ham-cheese.webp" alt="Ham and cheese sandwich with pimento cheese, pickled jalapeño, tomato and lettuce on a soft roll" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Ham and Cheese</h3>
@@ -452,16 +427,7 @@ MENU_BODY = '''<section class="page-hero">
       <article class="sw-row reveal">
         <span class="sw-num">04</span>
         <div class="sw-img">
-          <div class="photo photo--sandwich" style="position:absolute;inset:0">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path d="M40 140 Q200 60 360 140 L360 160 L40 160 Z" fill="#b57040" fill-opacity=".85"/>
-              <rect x="40" y="160" width="320" height="30" fill="#722217" fill-opacity=".9"/>
-              <rect x="40" y="190" width="320" height="14" fill="#8a7a4a" fill-opacity=".75"/>
-              <rect x="40" y="204" width="320" height="12" fill="#eadcb5" fill-opacity=".7"/>
-              <rect x="40" y="216" width="320" height="14" fill="#2a5a1a" fill-opacity=".7"/>
-              <path d="M40 230 L360 230 Q260 290 40 250 Z" fill="#b57040" fill-opacity=".85"/>
-            </svg>
-          </div>
+          <img src="assets/sw-04-roast-beef.webp" alt="Roast beef sandwich with mushroom, Swiss, baby kale and balsamic vinaigrette on sliced bread" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <div class="sw-copy">
           <h3>Roast Beef</h3>
