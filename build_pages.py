@@ -7,6 +7,7 @@ NAV = '''<header class="nav" id="nav">
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="index.html"    data-page="index.html">About</a>
+    <a href="review.html"   data-page="review.html">Review</a>
     <a href="mission.html"  data-page="mission.html">Mission</a>
     <a href="services.html" data-page="services.html">Services</a>
     <a href="menu.html"     data-page="menu.html">Menu</a>
@@ -20,6 +21,7 @@ NAV = '''<header class="nav" id="nav">
 <aside class="mobile-sheet" aria-hidden="true">
   <nav aria-label="Mobile">
     <a href="index.html"    data-page="index.html">About</a>
+    <a href="review.html"   data-page="review.html">Review</a>
     <a href="mission.html"  data-page="mission.html">Mission</a>
     <a href="services.html" data-page="services.html">Services</a>
     <a href="menu.html"     data-page="menu.html">Menu</a>
@@ -89,7 +91,7 @@ ABOUT_BODY = '''<section class="page-hero page-hero--about">
     <div class="hero-crest reveal">
       <img src="assets/logo.png" alt="San Francisco Meat Co. — Est. 2023" width="320" height="200"/>
     </div>
-    <p class="page-crumb">Page 01 of 05 · About</p>
+    <p class="page-crumb">Page 01 of 06 · About</p>
     <h1>We're the <em>new guys</em><br/>on the block.</h1>
     <div class="page-meta">
       <div><small>Established</small><strong>2023</strong></div>
@@ -157,12 +159,101 @@ ABOUT_BODY = '''<section class="page-hero page-hero--about">
   </div>
 </section>
 
-''' + next_page("Our Mission", "mission.html", 2, "Our<br/><em>Mission.</em>")
+''' + next_page("Reviews", "review.html", 2, "Our<br/><em>Reviews.</em>")
+
+
+REVIEW_BODY = '''<section class="reviews-page">
+  <div class="reviews-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="page-crumb" style="justify-content:center; color:var(--paper); margin-bottom:28px">Page 02 of 06 · Reviews</p>
+    <h1 class="reviews-title">Reviews</h1>
+
+    <a class="yelp-summary"
+       href="https://www.yelp.com/biz/san-francisco-meat-co-san-francisco-7"
+       target="_blank" rel="noreferrer"
+       aria-label="See all reviews on Yelp (opens in new tab)">
+      <span class="yelp-logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><rect width="48" height="48" rx="8" fill="#d32323"/><path d="M22 10c-5 1-9 3-9 3l3 10c1 2 3 1 3 1l3-1V10zm2 15l-1 3c-1 2 1 3 1 3l8 2s2 1 2-1l1-5c0-2-2-2-2-2l-8-1s-1-1-1 1zm10-6l-6 4s-1 1 0 2l5 5s1 1 3-1l3-4s1-1-1-3zm-15 7l-3 2c-2 1-1 3-1 3l4 6s1 2 2 0l1-8s0-2-2-3zm9 7l-2 8c0 2 2 1 2 1l5-5c1-2 0-3 0-3l-3-2c-2-1-2 1-2 1z" fill="#fff"/></svg>
+      </span>
+      <span class="yelp-rating">4.5</span>
+      <span class="yelp-stars" aria-label="4.5 out of 5 stars">
+        <svg viewBox="0 0 100 20" aria-hidden="true">
+          <defs>
+            <polygon id="rs" points="10,0 12.5,7 20,7 14,11.5 16,19 10,14.5 4,19 6,11.5 0,7 7.5,7"/>
+          </defs>
+          <use href="#rs" x="0" fill="#f5c518"/>
+          <use href="#rs" x="20" fill="#f5c518"/>
+          <use href="#rs" x="40" fill="#f5c518"/>
+          <use href="#rs" x="60" fill="#f5c518"/>
+          <use href="#rs" x="80" fill="#dadada"/>
+          <use href="#rs" x="80" fill="#f5c518" clip-path="inset(0 50% 0 0)"/>
+        </svg>
+      </span>
+      <span class="yelp-info">
+        <strong>San Francisco Meat Co</strong>
+        <span>86 Reviews</span>
+      </span>
+    </a>
+
+    <div class="review-cards">
+      <!-- Card 1 -->
+      <a class="review-card" href="https://www.yelp.com/biz/san-francisco-meat-co-san-francisco-7" target="_blank" rel="noreferrer" aria-label="Read Matthew L.'s review on Yelp">
+        <div class="rc-avatar rc-avatar--letter" style="background:#b8b8b8">M</div>
+        <div class="rc-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 100 20" aria-hidden="true"><use href="#rs" x="0" fill="#f5c518"/><use href="#rs" x="20" fill="#f5c518"/><use href="#rs" x="40" fill="#f5c518"/><use href="#rs" x="60" fill="#f5c518"/><use href="#rs" x="80" fill="#f5c518"/></svg>
+        </div>
+        <p class="rc-quote">"This place has the kind of old-school neighborhood fe..."</p>
+        <span class="rc-link">Read full review &#9654;</span>
+        <div class="rc-byline">
+          <span class="rc-y" aria-hidden="true"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="6" fill="#d32323"/><path d="M22 10c-5 1-9 3-9 3l3 10c1 2 3 1 3 1l3-1V10zm2 15l-1 3c-1 2 1 3 1 3l8 2s2 1 2-1l1-5c0-2-2-2-2-2l-8-1s-1-1-1 1zm10-6l-6 4s-1 1 0 2l5 5s1 1 3-1l3-4s1-1-1-3zm-15 7l-3 2c-2 1-1 3-1 3l4 6s1 2 2 0l1-8s0-2-2-3zm9 7l-2 8c0 2 2 1 2 1l5-5c1-2 0-3 0-3l-3-2c-2-1-2 1-2 1z" fill="#fff"/></svg></span>
+          <span>Matthew L. · 8/11/2026</span>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a class="review-card" href="https://www.yelp.com/biz/san-francisco-meat-co-san-francisco-7" target="_blank" rel="noreferrer" aria-label="Read Thomas R.'s review on Yelp">
+        <div class="rc-avatar" style="background:linear-gradient(135deg,#a67a4a,#4a3220)">T</div>
+        <div class="rc-stars" aria-label="4 out of 5 stars">
+          <svg viewBox="0 0 100 20" aria-hidden="true"><use href="#rs" x="0" fill="#f5c518"/><use href="#rs" x="20" fill="#f5c518"/><use href="#rs" x="40" fill="#f5c518"/><use href="#rs" x="60" fill="#f5c518"/><use href="#rs" x="80" fill="#dadada"/></svg>
+        </div>
+        <p class="rc-quote">"San Francisco Meat Co has caught my eye every time I'..."</p>
+        <span class="rc-link">Read full review &#9654;</span>
+        <div class="rc-byline">
+          <span class="rc-y" aria-hidden="true"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="6" fill="#d32323"/><path d="M22 10c-5 1-9 3-9 3l3 10c1 2 3 1 3 1l3-1V10zm2 15l-1 3c-1 2 1 3 1 3l8 2s2 1 2-1l1-5c0-2-2-2-2-2l-8-1s-1-1-1 1zm10-6l-6 4s-1 1 0 2l5 5s1 1 3-1l3-4s1-1-1-3zm-15 7l-3 2c-2 1-1 3-1 3l4 6s1 2 2 0l1-8s0-2-2-3zm9 7l-2 8c0 2 2 1 2 1l5-5c1-2 0-3 0-3l-3-2c-2-1-2 1-2 1z" fill="#fff"/></svg></span>
+          <span>Thomas R. · 7/23/2026</span>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a class="review-card" href="https://www.yelp.com/biz/san-francisco-meat-co-san-francisco-7" target="_blank" rel="noreferrer" aria-label="Read Iris H.'s review on Yelp">
+        <div class="rc-avatar" style="background:linear-gradient(135deg,#4a2a2a,#2a1612)">I</div>
+        <div class="rc-stars" aria-label="2 out of 5 stars">
+          <svg viewBox="0 0 100 20" aria-hidden="true"><use href="#rs" x="0" fill="#f5c518"/><use href="#rs" x="20" fill="#f5c518"/><use href="#rs" x="40" fill="#dadada"/><use href="#rs" x="60" fill="#dadada"/><use href="#rs" x="80" fill="#dadada"/></svg>
+        </div>
+        <p class="rc-quote">"I have been trying to support this place for years. I've liv..."</p>
+        <span class="rc-link">Read full review &#9654;</span>
+        <div class="rc-byline">
+          <span class="rc-y" aria-hidden="true"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="6" fill="#d32323"/><path d="M22 10c-5 1-9 3-9 3l3 10c1 2 3 1 3 1l3-1V10zm2 15l-1 3c-1 2 1 3 1 3l8 2s2 1 2-1l1-5c0-2-2-2-2-2l-8-1s-1-1-1 1zm10-6l-6 4s-1 1 0 2l5 5s1 1 3-1l3-4s1-1-1-3zm-15 7l-3 2c-2 1-1 3-1 3l4 6s1 2 2 0l1-8s0-2-2-3zm9 7l-2 8c0 2 2 1 2 1l5-5c1-2 0-3 0-3l-3-2c-2-1-2 1-2 1z" fill="#fff"/></svg></span>
+          <span>Iris H. · 4/12/2026</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="reviews-cta">
+      <a class="btn solid" href="https://www.yelp.com/biz/san-francisco-meat-co-san-francisco-7" target="_blank" rel="noreferrer">
+        See All 86 Reviews on Yelp
+        <svg class="arrow" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+''' + next_page("Our Mission", "mission.html", 3, "Our<br/><em>Mission.</em>")
 
 
 MISSION_BODY = '''<section class="page-hero">
   <div class="wrap">
-    <p class="page-crumb">Page 02 of 05 · Mission</p>
+    <p class="page-crumb">Page 03 of 06 · Mission</p>
     <h1>The community's<br/><em>go-to butcher.</em></h1>
   </div>
 </section>
@@ -185,12 +276,12 @@ MISSION_BODY = '''<section class="page-hero">
   </div>
 </section>
 
-''' + next_page("Services", "services.html", 3, "Our<br/><em>Services.</em>")
+''' + next_page("Services", "services.html", 4, "Our<br/><em>Services.</em>")
 
 
 SERVICES_BODY = '''<section class="page-hero">
   <div class="wrap">
-    <p class="page-crumb">Page 03 of 05 · Services</p>
+    <p class="page-crumb">Page 04 of 06 · Services</p>
     <h1>What <em>we do</em><br/>on the block.</h1>
   </div>
 </section>
@@ -231,7 +322,7 @@ SERVICES_BODY = '''<section class="page-hero">
   </div>
 </section>
 
-''' + next_page("Menu", "menu.html", 4, "Our<br/><em>Menu.</em>")
+''' + next_page("Menu", "menu.html", 5, "Our<br/><em>Menu.</em>")
 
 
 MENU_BODY = '''<section class="sec sec-dark sandwich-menu" style="padding-top:clamp(140px, 15vw, 200px)">
@@ -349,7 +440,7 @@ MENU_BODY = '''<section class="sec sec-dark sandwich-menu" style="padding-top:cl
   </div>
 </section>
 
-''' + next_page("Visit", "visit.html", 5, "Come<br/><em>Visit.</em>")
+''' + next_page("Visit", "visit.html", 6, "Come<br/><em>Visit.</em>")
 
 
 VISIT_BODY = '''<section class="visit-page" id="contact">
@@ -434,6 +525,7 @@ VISIT_BODY = '''<section class="visit-page" id="contact">
 # -------- Write pages --------
 pages = [
     ('index.html', 'About', 'A family-run Hayes Valley butcher shop at 320 Fell Street — dry-aged beef, Wagyu, sandwiches, and butchery classes.', 'https://sfmeatco.com/', ABOUT_BODY),
+    ('review.html', 'Reviews', '4.5 stars from 86 reviews on Yelp. Read what the Hayes Valley neighborhood has to say about San Francisco Meat Co.', 'https://sfmeatco.com/review.html', REVIEW_BODY),
     ('mission.html', 'Mission', 'Our vision: become the community\'s go-to destination for high-quality meats and exceptional service.', 'https://sfmeatco.com/mission.html', MISSION_BODY),
     ('services.html', 'Services', 'Specialty dry aging, custom orders, wholesale, catering, expert advice and butchery workshops.', 'https://sfmeatco.com/services.html', SERVICES_BODY),
     ('menu.html', 'Menu', 'Dry-aged Angus, Japanese and domestic Wagyu, pork, lamb, poultry and sandwiches at the Hayes Valley counter.', 'https://sfmeatco.com/menu.html', MENU_BODY),
