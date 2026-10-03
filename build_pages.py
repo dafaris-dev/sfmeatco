@@ -3,8 +3,7 @@ import os
 
 NAV = '''<header class="nav" id="nav">
   <a class="brand" href="index.html" aria-label="San Francisco Meat Co. — home">
-    <span class="brand-mark" aria-hidden="true">M</span>
-    <span class="brand-word">San Francisco Meat Co.<small>Hayes Valley · Est. 2023</small></span>
+    <img class="brand-logo" src="assets/logo.png" alt="San Francisco Meat Co." width="140" height="88"/>
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="index.html"    data-page="index.html">About</a>
@@ -38,8 +37,7 @@ FOOTER = '''<footer aria-labelledby="footer-title">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">
-          <span class="mk">M</span>
-          <span>San Francisco Meat Co.</span>
+          <img src="assets/logo.png" alt="San Francisco Meat Co." width="150" height="94" style="width:150px;height:auto;filter:brightness(1.05)"/>
         </div>
         <p>
           A family-run Hayes Valley butcher shop. Dry-aged beef, Wagyu,
@@ -127,8 +125,11 @@ def page(title, desc, canonical, body):
 
 # -------- Page content blocks --------
 
-ABOUT_BODY = '''<section class="page-hero">
+ABOUT_BODY = '''<section class="page-hero page-hero--about">
   <div class="wrap">
+    <div class="hero-crest reveal">
+      <img src="assets/logo.png" alt="San Francisco Meat Co. — Est. 2023" width="320" height="200"/>
+    </div>
     <p class="page-crumb">Page 01 of 05 · About</p>
     <h1>We're the <em>new guys</em><br/>on the block.</h1>
     <p class="page-lead">
