@@ -113,6 +113,7 @@ p{margin:0}
   position:fixed; top:0; left:0; right:0; z-index:50;
   display:flex; align-items:center; justify-content:space-between;
   padding:18px var(--gutter);
+  gap:28px;
   mix-blend-mode:normal;
   transition:background .4s var(--t), backdrop-filter .4s var(--t), padding .4s var(--t), border-color .4s var(--t);
   border-bottom:1px solid transparent;
@@ -128,18 +129,23 @@ p{margin:0}
   display:flex; align-items:center; gap:14px;
   font-family:var(--serif); letter-spacing:.02em;
   font-size:18px;
+  white-space:nowrap;
+  flex-shrink:0;
 }
 .brand-mark{
   width:36px; height:36px; display:grid; place-items:center;
   border:1px solid var(--paper); border-radius:50%;
   font-family:var(--serif); font-size:16px; font-weight:500;
   letter-spacing:0;
+  flex-shrink:0;
 }
-.brand-word small{display:block; font-family:var(--sans); font-size:9px; letter-spacing:.32em; text-transform:uppercase; color:var(--bone); margin-top:3px}
-.nav-links{display:flex; align-items:center; gap:36px}
+.brand-word{white-space:nowrap; line-height:1.1}
+.brand-word small{display:block; font-family:var(--sans); font-size:9px; letter-spacing:.32em; text-transform:uppercase; color:var(--bone); margin-top:3px; white-space:nowrap}
+.nav-links{display:flex; align-items:center; gap:28px; flex-shrink:0}
 .nav-links a{
   font-size:12px; letter-spacing:.22em; text-transform:uppercase; font-weight:500;
   position:relative; padding:6px 0;
+  white-space:nowrap;
 }
 .nav-links a::after{
   content:""; position:absolute; left:0; right:100%; bottom:-2px;
@@ -150,15 +156,22 @@ p{margin:0}
   font-size:11px; letter-spacing:.26em; text-transform:uppercase; font-weight:600;
   padding:12px 18px; border:1px solid var(--paper); border-radius:999px;
   transition:background .3s var(--t), color .3s var(--t);
+  white-space:nowrap; flex-shrink:0;
 }
 .nav-cta:hover{background:var(--paper); color:var(--ink)}
 .menu-btn{display:none}
 
-@media (max-width: 960px){
+@media (max-width: 1180px){
+  .nav-links{gap:22px}
+  .nav-links a{font-size:11px; letter-spacing:.18em}
+  .brand-word{font-size:16px}
+}
+@media (max-width: 1040px){
   .nav-links{display:none}
   .nav-cta{display:none}
   .menu-btn{
     display:flex; flex-direction:column; gap:5px; padding:10px;
+    position:relative; z-index:60;
   }
   .menu-btn span{width:22px; height:1px; background:var(--paper); transition:transform .4s var(--t), opacity .3s}
   .menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
@@ -171,10 +184,18 @@ p{margin:0}
   background:var(--ink);
   padding:120px var(--gutter) 40px;
   transform:translateY(-100%);
-  transition:transform .55s var(--t);
+  transition:transform .55s var(--t), visibility 0s linear .55s;
   display:flex; flex-direction:column; justify-content:space-between;
+  visibility:hidden;
+  pointer-events:none;
+  overflow-y:auto;
 }
-.menu-open .mobile-sheet{transform:translateY(0)}
+.menu-open .mobile-sheet{
+  transform:translateY(0);
+  visibility:visible;
+  pointer-events:auto;
+  transition:transform .55s var(--t), visibility 0s;
+}
 .mobile-sheet nav{display:flex; flex-direction:column; gap:4px}
 .mobile-sheet nav a{
   font-family:var(--serif); font-size:38px; padding:14px 0;
@@ -297,13 +318,18 @@ p{margin:0}
 }
 
 .hero-top{
-  position:absolute; top:0; left:0; right:0;
+  position:absolute; top:0; left:0; right:0; z-index:2;
   display:flex; justify-content:space-between; align-items:center;
-  padding:120px var(--gutter) 0;
+  padding:110px var(--gutter) 0;
   font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--bone);
+  pointer-events:none;
 }
 .hero-top span{display:inline-flex; align-items:center; gap:14px}
 .hero-top span::before{content:""; width:40px; height:1px; background:var(--bone)}
+@media (max-width: 720px){
+  .hero-top{padding:100px var(--gutter) 0; font-size:9px; gap:16px; flex-wrap:wrap}
+  .hero-top span::before{width:20px}
+}
 
 .hero-inner{
   position:relative;
@@ -799,18 +825,19 @@ footer{
 .reveal.d3{transition-delay:.3s}
 
 /* mobile cta sticky */
-.mobile-cta{display:none}
+.mobile-cta{display:none !important}
 @media (max-width: 720px){
   .mobile-cta{
-    display:flex; position:fixed; left:12px; right:12px; bottom:12px; z-index:40;
+    display:flex !important; position:fixed; left:12px; right:12px; bottom:12px; z-index:40;
     background:var(--ember); color:#fff;
     padding:14px 18px; border-radius:999px;
     font-size:11px; letter-spacing:.26em; text-transform:uppercase; font-weight:700;
     justify-content:space-between; align-items:center;
     box-shadow:0 10px 40px rgba(0,0,0,.5);
+    gap:14px;
   }
-  .mobile-cta a{color:#fff}
-  .mobile-cta a + a{border-left:1px solid rgba(255,255,255,.35); padding-left:14px; margin-left:14px}
+  .mobile-cta a{color:#fff; flex:1; text-align:center}
+  .mobile-cta a + a{border-left:1px solid rgba(255,255,255,.35)}
 }
 
 /* reduced motion */
@@ -1817,10 +1844,10 @@ footer{
   </div>
 </footer>
 
-<a class="mobile-cta" href="tel:+14155292349">
-  <span>Call The Shop</span>
-  <a href="https://maps.google.com/?q=320+Fell+Street+San+Francisco" target="_blank" rel="noreferrer">Directions →</a>
-</a>
+<div class="mobile-cta" role="group" aria-label="Quick actions">
+  <a href="tel:+14155292349">Call Shop</a>
+  <a href="https://maps.google.com/?q=320+Fell+Street+San+Francisco" target="_blank" rel="noreferrer">Directions</a>
+</div>
 
 <script>
 (function(){
